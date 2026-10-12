@@ -1,1 +1,3 @@
 # Quantization-Research
+
+Many LLMs use blocked integer quantization, a technique where weights are categorized by their power and represented in 4-bits in order to save space. These 4-bit numbers are then rounded back into 16-bit during matrix multiplication, but this raises the question: does this double-rounding (and the consequential roundings from MM) provide enough precision for the model? If it does, how much are we losing by using 4-bit representation? If it doesn't, by how much? And can we devise another method for representing these weights that maintains training precision while keeping space efficient?
