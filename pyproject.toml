@@ -1,0 +1,18 @@
+[project]
+name = "quantization-research"
+version = "0.1.0"
+description = "Evaluating LLM inference precision (fp32/fp16/bf16/fp8) with PyTorch"
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "transformers",
+    "accelerate",
+    "datasets",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qr"]
